@@ -1,0 +1,12 @@
+postgres:
+  image: postgres:alpine
+  restart: always
+  container_name: postgres-0
+  ports:
+    - '3000:5432'
+  environment:
+    POSTGRES_USER: root
+    POSTGRES_PASSWORD: root
+    POSTGRES_DB: adonisvue
+  volumes:
+    - ./init:/docker-entrypoint-initdb.d/

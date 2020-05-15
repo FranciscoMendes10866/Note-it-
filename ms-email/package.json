@@ -1,0 +1,28 @@
+{
+  "name": "ms-email",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "pm2 start src/server.js --watch",
+    "stop": "pm2 stop server",
+    "restart": "pm2 restart server",
+    "reload": "pm2 reload server",
+    "delete": "pm2 delete server",
+    "ls": "pm2 ls",
+    "logs": "pm2 logs",
+    "monit": "pm2 monit",
+    "serve": "pm2-runtime start ecosystem.config.yml --env production"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "@sendgrid/mail": "^7.1.0",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-cors": "^0.0.16",
+    "koa-morgan": "^1.0.1",
+    "koa-router": "^8.0.8",
+    "node-mailjet": "^3.3.1",
+    "pm2": "^4.4.0"
+  }
+}
